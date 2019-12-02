@@ -1,11 +1,11 @@
 * {
-	/* background-color: #f00; */
-	/* border: 1px solid #00f; */
+	/* background-color: #f00;
+	border: 1px solid #00f; */
 }
 
 html,
 body {
-	background-color: #ececec;
+	background-color: #b18b8b; /*(ececec)*/
 	position: relative;
 	margin: 0;
 }
