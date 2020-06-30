@@ -1,5 +1,5 @@
 
-import tasks from './tasks'
+// // import tasks from './tasks'
 
 // let tasks = [
 // 	{
@@ -20,64 +20,75 @@ import tasks from './tasks'
 // ]
 
 
-let listNode = document.querySelector('.incomplete-tasks') //ul1
-let ulDone = document.querySelector('.ulDone') //ul2
+// let listNode = document.querySelector('.incomplete-tasks') //ul1
+// let ulDone = document.querySelector('.ulDone') //ul2
 
 
-const render = function () {
-	listNode.innerHTML = ''
+// const render = function () {
+// 	listNode.innerHTML = ''
 
-	for (let i = 0; i < tasks.length; i++) {
+// 	for (let i = 0; i < tasks.length; i++) {
 
-		let taskNode = document.createElement('li')
-		let checkBox = document.createElement('input')
-		let taskDone = document.createElement('li')
-		let button = document.createElement('button')
+// 		let taskNode = document.createElement('li')
+// 		let checkBox = document.createElement('input')
+// 		let taskDone = document.createElement('li')
+// 		let button = document.createElement('button')
 
-		button.classList.add('remove')
+// 		button.classList.add('remove')
 
-		checkBox.type = 'checkbox'
-		checkBox.checked = tasks[i].completed
+// 		checkBox.type = 'checkbox'
+// 		checkBox.checked = tasks[i].completed
 		
-		checkBox.addEventListener('click', e => {
+// 		checkBox.addEventListener('click', e => {
 
-			if(tasks[i].completed = e.srcElement.checked) {
+// 			if(tasks[i].completed = e.srcElement.checked) {
 				
-				ulDone.append(taskDone)
+// 				ulDone.append(taskDone)
 		
-				taskDone.innerHTML = tasks[i].name
+// 				taskDone.innerHTML = tasks[i].name
 
-				tasks = tasks.filter(task => !task.completed)	
+// 				tasks = tasks.filter(task => !task.completed)	
 				 
-				taskDone.prepend(checkBox)//add checkBox
+// 				taskDone.prepend(checkBox)//add checkBox
 
-				taskDone.innerHTML += ' ✔'	
+// 				taskDone.innerHTML += ' ✔'	
 
 				
-			}
-			render()
-		})
+// 			}
+// 			render()
+// 		})
 
-		button.addEventListener('click', function() {
+// 		button.addEventListener('click', function() {
 
-			tasks = tasks.filter(task => {
-				return id !== task.id
-			})
-			render()
-		})
+// 			tasks = tasks.filter(task => {
+// 				return id !== task.id
+// 			})
+// 			render()
+// 		})
+		
+// 		// function deleteTodo(e) {
+// 		// 	e.addEventListener("click", () => {
+// 		// 		e.parentElement.remove()
+// 		// 		event.stopPropagation()
+// 		// 		console.log(tasks[i])
+// 		// 	})
+// 		// }
+// 		// deleteTodo(button)
+
 		
 
-		taskNode.innerHTML = tasks[i].name //add name-list
 
-		// if (tasks[i].completed) taskNode.innerHTML += ' ✔'
+// 		taskNode.innerHTML = tasks[i].name //add name-list
+
+// 		// if (tasks[i].completed) taskNode.innerHTML += ' ✔'
 		
-		taskNode.prepend(button)
-		taskNode.prepend(checkBox) //add checkBox
-		listNode.append(taskNode) // add list
-	}
-}
+// 		taskNode.prepend(button)
+// 		taskNode.prepend(checkBox) //add checkBox
+// 		listNode.append(taskNode) // add list
+// 	}
+// }
 
-render()
+// render()
 
 
 
@@ -85,38 +96,38 @@ render()
   
 
 
-// enter, add list
-document.querySelector('input').addEventListener('keydown', function (e) {
-	if (e.keyCode === 13) {
+// // enter, add list
+// document.querySelector('input').addEventListener('keydown', function (e) {
+// 	if (e.keyCode === 13) {
 
-		if (this.value.trim() === '') return
+// 		if (this.value.trim() === '') return
 
-		tasks.push({
-			name: this.value,
-			completed: false,
-		})
+// 		tasks.push({
+// 			name: this.value,
+// 			completed: false,
+// 		})
 
-		this.value = ''
+// 		this.value = ''
 
-		render()
-	}
-});
+// 		render()
+// 	}
+// });
 
 
-document.getElementById('add').addEventListener('click', function() {
-	let value = document.getElementById('new-task').value
-	if (value.trim() === '') return
+// document.getElementById('add').addEventListener('click', function() {
+// 	let value = document.getElementById('new-task').value
+// 	if (value.trim() === '') return
 
-	tasks.push({
-		name: value,
-		completed: false,
-	})
+// 	tasks.push({
+// 		name: value,
+// 		completed: false,
+// 	})
 
-	document.querySelector('input').value = '' //очищаем строку
+// 	document.querySelector('input').value = '' //очищаем строку
 
-	render()
+// 	render()
 	
-})
+// })
 
  
 

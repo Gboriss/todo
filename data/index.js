@@ -14,4 +14,7 @@ let tasks = [
 	},
 ]
 
-export default tasks
+
+export {
+	tasks,
+}
